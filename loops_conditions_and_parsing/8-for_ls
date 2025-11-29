@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# for ls
+for file in *
+do
+	newname="${file#*-}"
+	echo "$newname"
+done
