@@ -20,8 +20,6 @@ case "$1" in
                         kill "$(cat "$PIDFILE")" 2>/dev/null
                         rm -f "$PIDFILE"
                 fi
-                echo "manage_my_process stopped"
-
                 $PROCESS &
                 echo $! > "$PIDFILE"
                 echo "manage_my_process restarted"
